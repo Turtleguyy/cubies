@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  projectID: MyString
+  projectName: MyString
+  clientName: MyString
+  taskeeID: MyString
+  assignedTo: MyString
+  taskCreator: MyString
+  taskName: MyString
+  taskDescription: MyString
+  status: MyString
+  priority: MyString
+  dueDate: MyString
+  startDate: MyString
+
+two:
+  projectID: MyString
+  projectName: MyString
+  clientName: MyString
+  taskeeID: MyString
+  assignedTo: MyString
+  taskCreator: MyString
+  taskName: MyString
+  taskDescription: MyString
+  status: MyString
+  priority: MyString
+  dueDate: MyString
+  startDate: MyString

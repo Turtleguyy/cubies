@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Clientid:</b>
+  <%= @project.clientID %>
+</p>
+
+<p>
+  <b>Projectname:</b>
+  <%= @project.projectName %>
+</p>
+
+<p>
+  <b>Projectdescription:</b>
+  <%= @project.projectDescription %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @project.status %>
+</p>
+
+<p>
+  <b>Duedate:</b>
+  <%= @project.dueDate %>
+</p>
+
+<p>
+  <b>Startdate:</b>
+  <%= @project.startDate %>
+</p>
+
+<p>
+  <b>Clientname:</b>
+  <%= @project.clientName %>
+</p>
+
+<p>
+  <b>Primarycontactname:</b>
+  <%= @project.primaryContactName %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

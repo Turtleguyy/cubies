@@ -1,0 +1,65 @@
+<%= form_for(@task) do |f| %>
+  <% if @task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@task.errors.count, "error") %> prohibited this task from being saved:</h2>
+
+      <ul>
+      <% @task.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :projectID %><br />
+    <%= f.text_field :projectID %>
+  </div>
+  <div class="field">
+    <%= f.label :projectName %><br />
+    <%= f.text_field :projectName %>
+  </div>
+  <div class="field">
+    <%= f.label :clientName %><br />
+    <%= f.text_field :clientName %>
+  </div>
+  <div class="field">
+    <%= f.label :taskeeID %><br />
+    <%= f.text_field :taskeeID %>
+  </div>
+  <div class="field">
+    <%= f.label :assignedTo %><br />
+    <%= f.text_field :assignedTo %>
+  </div>
+  <div class="field">
+    <%= f.label :taskCreator %><br />
+    <%= f.text_field :taskCreator %>
+  </div>
+  <div class="field">
+    <%= f.label :taskName %><br />
+    <%= f.text_field :taskName %>
+  </div>
+  <div class="field">
+    <%= f.label :taskDescription %><br />
+    <%= f.text_field :taskDescription %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :dueDate %><br />
+    <%= f.text_field :dueDate %>
+  </div>
+  <div class="field">
+    <%= f.label :startDate %><br />
+    <%= f.text_field :startDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

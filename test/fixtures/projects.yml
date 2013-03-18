@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  clientID: MyString
+  projectName: MyString
+  projectDescription: MyString
+  status: MyString
+  dueDate: MyString
+  startDate: MyString
+  clientName: MyString
+  primaryContactName: MyString
+
+two:
+  clientID: MyString
+  projectName: MyString
+  projectDescription: MyString
+  status: MyString
+  dueDate: MyString
+  startDate: MyString
+  clientName: MyString
+  primaryContactName: MyString
