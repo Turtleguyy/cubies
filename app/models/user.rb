@@ -6,4 +6,6 @@ class User < ActiveRecord::Base
   has_secure_password
   validates_uniqueness_of :user_name, :student_id
   validates_presence_of :user_name, :password, :password_confirmation, :student_id
+
+  has_many :projects, dependent: :destroy
 end
