@@ -1,10 +1,11 @@
 class CreateClients < ActiveRecord::Migration
-  def change
+  def up
     create_table :clients do |t|
-      t.string :primaryContact
+      t.string :contact_name
+      t.string :primary_contact
       t.string :phone
       t.string :address
-      t.string :zipcode
+      t.string :zip_code
       t.string :city
       t.string :state
       t.string :website
@@ -12,5 +13,9 @@ class CreateClients < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+
+  def down
+    drop_table :clients
   end
 end

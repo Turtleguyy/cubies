@@ -11,54 +11,56 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130317221012) do
+ActiveRecord::Schema.define(:version => 20130320001424) do
 
   create_table "clients", :force => true do |t|
-    t.string   "primaryContact"
+    t.string   "contact_name"
+    t.string   "primary_contact"
     t.string   "phone"
     t.string   "address"
-    t.string   "zipcode"
+    t.string   "zip_code"
     t.string   "city"
     t.string   "state"
     t.string   "website"
     t.string   "email"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-    t.string   "clientName"
-  end
-
-  create_table "projects", :force => true do |t|
-    t.string   "clientID"
-    t.string   "projectName"
-    t.string   "projectDescription"
-    t.string   "status"
-    t.string   "dueDate"
-    t.string   "startDate"
-    t.string   "clientName"
-    t.string   "primaryContactName"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
-  end
-
-  create_table "tasks", :force => true do |t|
-    t.string   "projectID"
-    t.string   "projectName"
-    t.string   "clientName"
-    t.string   "taskeeID"
-    t.string   "assignedTo"
-    t.string   "taskCreator"
-    t.string   "taskName"
-    t.string   "taskDescription"
-    t.string   "status"
-    t.string   "priority"
-    t.string   "dueDate"
-    t.string   "startDate"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
 
+  create_table "projects", :force => true do |t|
+    t.string   "client_id"
+    t.string   "project_name"
+    t.string   "project_description"
+    t.string   "status"
+    t.string   "due_date"
+    t.string   "start_date"
+    t.string   "client_name"
+    t.string   "primary_contact_name"
+    t.string   "student_id"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.integer  "user_id"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "project_id"
+    t.string   "project_name"
+    t.string   "client_name"
+    t.string   "taskee_id"
+    t.string   "assigned_to"
+    t.string   "task_creator"
+    t.string   "task_name"
+    t.string   "task_description"
+    t.string   "status"
+    t.string   "priority"
+    t.string   "due_date"
+    t.string   "start_date"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
   create_table "users", :force => true do |t|
-    t.string   "teamID"
+    t.string   "team_id"
     t.string   "user_name"
     t.string   "first_name"
     t.string   "last_name"
@@ -66,11 +68,12 @@ ActiveRecord::Schema.define(:version => 20130317221012) do
     t.string   "phone"
     t.string   "city"
     t.string   "state"
-    t.string   "zipcode"
+    t.string   "zip_code"
     t.string   "avatar"
+    t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.string   "password_digest"
+    t.string   "student_id"
   end
 
 end
