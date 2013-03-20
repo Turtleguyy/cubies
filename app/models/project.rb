@@ -3,4 +3,6 @@ class Project < ActiveRecord::Base
                   :project_description, :project_name, :start_date, :status, :user_id
 
   validates_presence_of :project_name, :status
+
+  belongs_to :user
 end
