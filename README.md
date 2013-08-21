@@ -80,6 +80,7 @@ If you already have Xcode, Rails, Homebrew, Git, and the latest version of Ruby,
 
 3. Modify /config/database.yml, replacing my username with yours.
 4. Then...
+
 		rake db:create
 		rake db:migrate
 		rails server
