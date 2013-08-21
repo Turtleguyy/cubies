@@ -84,6 +84,8 @@ If you already have Xcode, Rails, Homebrew, Git, and the latest version of Ruby,
 		rake db:create
 		rake db:migrate
 		rails server
+		
+5. Go to `http://localhost:3000` in your browser.
 
 ## Project Overview
 
