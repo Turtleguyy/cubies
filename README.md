@@ -72,12 +72,17 @@ If you already have Xcode, Rails, Homebrew, Git, and the latest version of Ruby,
 		
 ## Setting Up The Project
 
-1. Clone this repository.
-2. bundle
-3. Modify /config/database.yml
-3. rake db:create
-4. rake db:migrate
-5. rails server
+1. Clone this repository and bundle up the gems.
+		
+		git clone git@github.com:turtleguyy/cubies.git
+		cd cubies/
+		bundle
+
+3. Modify /config/database.yml, replacing my username with yours.
+4. Then...
+		rake db:create
+		rake db:migrate
+		rails server
 
 ## Project Overview
 
